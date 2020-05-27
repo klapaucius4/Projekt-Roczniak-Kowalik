@@ -6,7 +6,11 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grzegorz Roczniak &amp; Michał Kowalik</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontologia opisująca drużynę piłkarską</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v1.0.0</owl:versionInfo>
+    </owl:Ontology>
     
 
 
@@ -405,6 +409,36 @@
     
 
 
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eder</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarabia</hasLastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joan</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BARBARÀ</hasLastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quique</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Setién</hasLastName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender1">
@@ -413,6 +447,8 @@
         <hasFirstName>Nélson</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">177</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semedo</hasLastName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">109</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">67</hasWeight>
     </owl:NamedIndividual>
     
@@ -426,6 +462,8 @@
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerard</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">194</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piqué</hasLastName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">47</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">530</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">85</hasWeight>
     </owl:NamedIndividual>
     
@@ -434,9 +472,13 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender3 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clément</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">186</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lenglet</hasLastName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">73</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">81</hasWeight>
     </owl:NamedIndividual>
     
@@ -445,9 +487,13 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jordi</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">170</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alba</hasLastName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">323</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">68</hasWeight>
     </owl:NamedIndividual>
     
@@ -460,9 +506,31 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marc-André</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">187</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stegen</hasLastName>
-        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marc-André ter Stegen</hasName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ter Stegen</hasLastName>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">223</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">85</hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#GoalkeepingCoach1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#GoalkeepingCoach1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeping_Coach"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jon</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascua</hasLastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#GoalkeepingCoach2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#GoalkeepingCoach2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeping_Coach"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JOSÉ RAMÓN</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DE LA FUENTE</hasLastName>
     </owl:NamedIndividual>
     
 
@@ -475,6 +543,8 @@
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">184</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rakitic</hasLastName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">297</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">78</hasWeight>
     </owl:NamedIndividual>
     
@@ -484,9 +554,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder2">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <hasFirstName>Sergio</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">189</hasHeight>
         <hasLastName>Busquets</hasLastName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">567</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">76</hasWeight>
     </owl:NamedIndividual>
     
@@ -496,9 +569,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder3">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arturo</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">180</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vidal</hasLastName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">84</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">75</hasWeight>
     </owl:NamedIndividual>
     
@@ -508,11 +584,33 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder4">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">171</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melo</hasLastName>
-        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur</hasName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">66</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">73</hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Opponent1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Opponent1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Opponent"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Real Madrid</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Management"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner"/>
+        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Òscar</hasFirstName>
+        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grau</hasLastName>
     </owl:NamedIndividual>
     
 
@@ -520,10 +618,13 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luis</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">182</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suárez</hasLastName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">191</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">270</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">86</hasWeight>
     </owl:NamedIndividual>
     
@@ -532,10 +633,13 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker2 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lionel</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">170</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Messi</hasLastName>
+        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">627</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">718</hasNumberOfHours>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">72</hasWeight>
     </owl:NamedIndividual>
     
@@ -544,6 +648,8 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker3 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ousmane</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">178</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dembélé</hasLastName>
@@ -557,6 +663,7 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antoine</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">176</hasHeight>
