@@ -7,3 +7,6 @@
 #### Projekt przygotowali:
  - Grzegorz Roczniak
  - Michał Kowalik, 189383
+
+
+ [Adres do dokumentacji projektu](https://docs.google.com/document/d/1yawN6ddzBbQxukvK-pbnSQg2cVrh47j5AnfHj7EFPnU/edit?usp=sharing)
