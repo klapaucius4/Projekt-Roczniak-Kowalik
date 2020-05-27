@@ -414,6 +414,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant"/>
         <isManagedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner1"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eder</hasFirstName>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarabia</hasLastName>
     </owl:NamedIndividual>
@@ -460,6 +461,8 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeper1"/>
         <hasFirstName>Nélson</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">177</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semedo</hasLastName>
@@ -580,6 +583,9 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder3"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker1"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker2"/>
         <hasFirstName>Sergio</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">189</hasHeight>
         <hasLastName>Busquets</hasLastName>
@@ -636,6 +642,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Management"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant1"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant2"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Òscar</hasFirstName>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grau</hasLastName>
     </owl:NamedIndividual>
@@ -680,6 +689,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker"/>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
+        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker4"/>
         <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ousmane</hasFirstName>
         <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">178</hasHeight>
         <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dembélé</hasLastName>
