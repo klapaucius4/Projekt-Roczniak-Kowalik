@@ -1,15 +1,24 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
 <rdf:RDF xmlns="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#"
      xml:base="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10">
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grzegorz Roczniak &amp; Michał Kowalik</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontologia opisująca drużynę piłkarską</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v1.0.0</owl:versionInfo>
+        <rdfs:label rdf:datatype="&xsd;string">Ontologia opisująca drużynę piłkarską</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">Grzegorz Roczniak &amp; Michał Kowalik</rdfs:isDefinedBy>
+        <owl:versionInfo rdf:datatype="&xsd;string">v1.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -28,9 +37,9 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#competesWith -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#competesWith">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Opponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
     </owl:ObjectProperty>
     
 
@@ -38,9 +47,19 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#conductsTraining -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#conductsTraining">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Training"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#cooperateWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#cooperateWith">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach"/>
     </owl:ObjectProperty>
     
 
@@ -48,7 +67,7 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasBoss -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasBoss">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner"/>
     </owl:ObjectProperty>
@@ -58,7 +77,7 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasTraining -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasTraining">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Training"/>
     </owl:ObjectProperty>
@@ -68,9 +87,9 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#isManagedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#isManagedBy">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
     </owl:ObjectProperty>
     
 
@@ -78,7 +97,7 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#isTeachedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#isTeachedBy">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
     </owl:ObjectProperty>
@@ -88,9 +107,9 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#knows -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#knows">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -98,9 +117,9 @@
     <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#teachesPlayer -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#teachesPlayer">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
     </owl:ObjectProperty>
     
 
@@ -122,7 +141,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Management"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -131,7 +150,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasHeight">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
 
@@ -140,7 +159,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasIntensity">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Training"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -151,7 +170,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Management"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -160,7 +179,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasName">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Opponent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -169,7 +188,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasNumberOfGoals">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
 
@@ -178,7 +197,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasNumberOfHours">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Training"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
     </owl:DatatypeProperty>
     
 
@@ -187,7 +206,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasPosition">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -197,7 +216,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasSalary">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+        <rdfs:range rdf:resource="&owl;real"/>
     </owl:DatatypeProperty>
     
 
@@ -206,7 +225,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#hasWeight">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
 
@@ -325,8 +344,8 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#knows"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
@@ -368,8 +387,8 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#knows"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">11</owl:minQualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
@@ -383,8 +402,8 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#knows"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Management"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
@@ -413,10 +432,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant"/>
-        <isManagedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
+        <hasFirstName rdf:datatype="&xsd;string">Eder</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Sarabia</hasLastName>
+        <cooperateWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
+        <isManagedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager1"/>
         <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eder</hasFirstName>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarabia</hasLastName>
     </owl:NamedIndividual>
     
 
@@ -425,9 +445,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant2">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant"/>
-        <isManagedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joan</hasFirstName>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BARBARÀ</hasLastName>
+        <hasLastName rdf:datatype="&xsd;string">BARBARÀ</hasLastName>
+        <hasFirstName rdf:datatype="&xsd;string">Joan</hasFirstName>
+        <cooperateWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
+        <isManagedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager1"/>
     </owl:NamedIndividual>
     
 
@@ -436,21 +457,20 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach"/>
-        <hasBoss rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner1"/>
+        <hasFirstName rdf:datatype="&xsd;string">Quique</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Setién</hasLastName>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender1"/>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender2"/>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender3"/>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender4"/>
+        <isManagedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager1"/>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder1"/>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder2"/>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder3"/>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder4"/>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker1"/>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker2"/>
-        <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker3"/>
-        <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker4"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quique</hasFirstName>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Setién</hasLastName>
+        <conductsTraining rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Training1"/>
     </owl:NamedIndividual>
     
 
@@ -460,15 +480,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">1</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="&xsd;int">109</hasNumberOfHours>
+        <hasHeight rdf:datatype="&xsd;int">177</hasHeight>
+        <hasWeight rdf:datatype="&xsd;int">67</hasWeight>
+        <hasLastName rdf:datatype="&xsd;string">Semedo</hasLastName>
+        <hasFirstName>Nélson</hasFirstName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
         <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
         <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeper1"/>
-        <hasFirstName>Nélson</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">177</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semedo</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">109</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">67</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -478,13 +498,13 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender2">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <hasHeight rdf:datatype="&xsd;int">194</hasHeight>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">47</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="&xsd;int">530</hasNumberOfHours>
+        <hasWeight rdf:datatype="&xsd;int">85</hasWeight>
+        <hasFirstName rdf:datatype="&xsd;string">Gerard</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Piqué</hasLastName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerard</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">194</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piqué</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">47</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">530</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">85</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -494,13 +514,13 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender3">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <hasHeight rdf:datatype="&xsd;int">186</hasHeight>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">5</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="&xsd;int">73</hasNumberOfHours>
+        <hasWeight rdf:datatype="&xsd;int">81</hasWeight>
+        <hasFirstName rdf:datatype="&xsd;string">Clément</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Lenglet</hasLastName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clément</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">186</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lenglet</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">73</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">81</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -510,13 +530,13 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender4">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">16</hasNumberOfGoals>
+        <hasHeight rdf:datatype="&xsd;int">170</hasHeight>
+        <hasNumberOfHours rdf:datatype="&xsd;int">323</hasNumberOfHours>
+        <hasWeight rdf:datatype="&xsd;int">68</hasWeight>
+        <hasLastName rdf:datatype="&xsd;string">Alba</hasLastName>
+        <hasFirstName rdf:datatype="&xsd;string">Jordi</hasFirstName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jordi</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">170</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alba</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">323</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">68</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -526,13 +546,13 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeper1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeper"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <hasHeight rdf:datatype="&xsd;int">187</hasHeight>
+        <hasNumberOfHours rdf:datatype="&xsd;int">223</hasNumberOfHours>
+        <hasWeight rdf:datatype="&xsd;int">85</hasWeight>
+        <hasFirstName rdf:datatype="&xsd;string">Marc-André</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">ter Stegen</hasLastName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#GoalkeepingCoach1"/>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#GoalkeepingCoach2"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marc-André</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">187</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ter Stegen</hasLastName>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">223</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">85</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -542,9 +562,10 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#GoalkeepingCoach1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeping_Coach"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
+        <hasFirstName rdf:datatype="&xsd;string">Jon</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Pascua</hasLastName>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeper1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jon</hasFirstName>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascua</hasLastName>
+        <isManagedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager1"/>
     </owl:NamedIndividual>
     
 
@@ -554,9 +575,21 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#GoalkeepingCoach2">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeping_Coach"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Trainer"/>
+        <hasLastName rdf:datatype="&xsd;string">DE LA FUENTE</hasLastName>
+        <hasFirstName rdf:datatype="&xsd;string">JOSÉ RAMÓN</hasFirstName>
         <teachesPlayer rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeper1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JOSÉ RAMÓN</hasFirstName>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DE LA FUENTE</hasLastName>
+        <isManagedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Manager"/>
+        <hasFirstName rdf:datatype="&xsd;string">Carlos</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Garcia</hasLastName>
+        <hasBoss rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner1"/>
     </owl:NamedIndividual>
     
 
@@ -566,13 +599,13 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <hasHeight rdf:datatype="&xsd;int">184</hasHeight>
+        <hasNumberOfHours rdf:datatype="&xsd;int">297</hasNumberOfHours>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">35</hasNumberOfGoals>
+        <hasWeight rdf:datatype="&xsd;int">78</hasWeight>
+        <hasFirstName rdf:datatype="&xsd;string">Ivan</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Rakitic</hasLastName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">184</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rakitic</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">297</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">78</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -582,16 +615,16 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder2">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">15</hasNumberOfGoals>
+        <hasHeight rdf:datatype="&xsd;int">189</hasHeight>
+        <hasNumberOfHours rdf:datatype="&xsd;int">567</hasNumberOfHours>
+        <hasWeight rdf:datatype="&xsd;int">76</hasWeight>
+        <hasLastName>Busquets</hasLastName>
+        <hasFirstName>Sergio</hasFirstName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
         <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder3"/>
         <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker1"/>
         <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker2"/>
-        <hasFirstName>Sergio</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">189</hasHeight>
-        <hasLastName>Busquets</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">567</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">76</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -601,13 +634,13 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder3">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <hasHeight rdf:datatype="&xsd;int">180</hasHeight>
+        <hasWeight rdf:datatype="&xsd;int">75</hasWeight>
+        <hasNumberOfHours rdf:datatype="&xsd;int">84</hasNumberOfHours>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">9</hasNumberOfGoals>
+        <hasFirstName rdf:datatype="&xsd;string">Arturo</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Vidal</hasLastName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arturo</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">180</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vidal</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">84</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">75</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -617,13 +650,13 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder4">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
+        <hasHeight rdf:datatype="&xsd;int">171</hasHeight>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">4</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="&xsd;int">66</hasNumberOfHours>
+        <hasWeight rdf:datatype="&xsd;int">73</hasWeight>
+        <hasFirstName rdf:datatype="&xsd;string">Arthur</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Melo</hasLastName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">171</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melo</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">66</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">73</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -632,7 +665,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Opponent1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Opponent"/>
-        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Real Madrid</hasName>
+        <hasName rdf:datatype="&xsd;string">Real Madrid</hasName>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender1"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender2"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender3"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender4"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeper1"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder1"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder2"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder3"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Midfielder4"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker1"/>
+        <competesWith rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker2"/>
     </owl:NamedIndividual>
     
 
@@ -642,11 +686,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Management"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Owner"/>
+        <hasLastName rdf:datatype="&xsd;string">Grau</hasLastName>
+        <hasFirstName rdf:datatype="&xsd;string">Òscar</hasFirstName>
         <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant1"/>
         <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant2"/>
         <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Òscar</hasFirstName>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grau</hasLastName>
     </owl:NamedIndividual>
     
 
@@ -656,13 +700,13 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker1">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker"/>
+        <hasHeight rdf:datatype="&xsd;int">182</hasHeight>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">191</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="&xsd;int">270</hasNumberOfHours>
+        <hasWeight rdf:datatype="&xsd;int">86</hasWeight>
+        <hasFirstName rdf:datatype="&xsd;string">Luis</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Suárez</hasLastName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luis</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">182</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suárez</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">191</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">270</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">86</hasWeight>
     </owl:NamedIndividual>
     
 
@@ -672,46 +716,23 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker2">
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker"/>
+        <hasHeight rdf:datatype="&xsd;int">170</hasHeight>
+        <hasNumberOfGoals rdf:datatype="&xsd;int">627</hasNumberOfGoals>
+        <hasNumberOfHours rdf:datatype="&xsd;int">718</hasNumberOfHours>
+        <hasWeight rdf:datatype="&xsd;int">72</hasWeight>
+        <hasFirstName rdf:datatype="&xsd;string">Lionel</hasFirstName>
+        <hasLastName rdf:datatype="&xsd;string">Messi</hasLastName>
         <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lionel</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">170</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Messi</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">627</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">718</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">72</hasWeight>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker3 -->
+    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Training1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker3">
-        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker"/>
-        <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <knows rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker4"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ousmane</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">178</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dembélé</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">74</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">67</hasWeight>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker4 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker4">
-        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Player"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Striker"/>
-        <isTeachedBy rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach1"/>
-        <hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antoine</hasFirstName>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">176</hasHeight>
-        <hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Griezmann</hasLastName>
-        <hasNumberOfGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</hasNumberOfGoals>
-        <hasNumberOfHours rdf:datatype="http://www.w3.org/2001/XMLSchema#int">37</hasNumberOfHours>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">73</hasWeight>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Training1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Training"/>
+        <hasNumberOfHours rdf:datatype="&xsd;integer">3</hasNumberOfHours>
+        <hasIntensity rdf:datatype="&xsd;string">intense</hasIntensity>
     </owl:NamedIndividual>
     
 
@@ -725,15 +746,7 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeping_Coach"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Defender"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeper"/>
@@ -742,7 +755,7 @@
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Management"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Opponent"/>
@@ -751,9 +764,17 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Training"/>
         </owl:members>
     </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Assistant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Coach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/grzesiek/ontologies/2020/4/untitled-ontology-10#Goalkeeping_Coach"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
